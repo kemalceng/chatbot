@@ -1,6 +1,6 @@
 {
-    "appSecret": "",
-    "pageAccessToken": "",
-    "validationToken": "",
-    "serverURL": ""
+    "appSecret": "1e29cd8c77fdff15101a61bb287641bb",
+    "pageAccessToken": "EAACZBdfgZACRcBAKw3LFRKs9JtrLZAvt20nzwUoZCJ9tnLag23HP8O1FCxU2CoaNVVWqyWMv6bZBDBDAKHLntFmUijeUVZA8b2gDUhDTgZCB2JCcJo1ZBV4KFGBo7dSWq1LcaI43lK8pzVj4HsqtiRepyZA6ZB91Itc0JlGBWCPd2SagZDZD",
+    "validationToken": "kargomuzu_messenger_chatbotla_takip_ediyoruz",
+    "serverURL": "https://chatbot-kargom.herokuapp.com/"
 }
