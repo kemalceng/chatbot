@@ -550,7 +550,8 @@ function sendButtonMessage(recipientId) {
           buttons:[{
             type: "web_url",
             url: "https://www.oculus.com/en-us/rift/",
-            title: "Open Web URL"
+            title: "Open Web URL",
+            "webview_height_ratio": "compact"
           }, {
             type: "postback",
             title: "Trigger Postback",

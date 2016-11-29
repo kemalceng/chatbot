@@ -1,0 +1,51 @@
+-----------------------------------------------------------------------------------
+* Greeting *
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type":"greeting",
+  "greeting":{
+    "text":"Merhaba {{user_first_name}}, kargonla ilgili benden bilgi alabilirsin."
+  }                         
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAACZBdfgZACRcBAKw3LFRKs9JtrLZAvt20nzwUoZCJ9tnLag23HP8O1FCxU2CoaNVVWqyWMv6bZBDBDAKHLntFmUijeUVZA8b2gDUhDTgZCB2JCcJo1ZBV4KFGBo7dSWq1LcaI43lK8pzVj4HsqtiRepyZA6ZB91Itc0JlGBWCPd2SagZDZD"
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+* Persistent Menu *
+- See "messenger_extensions" for web_url menu item
+
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type" : "call_to_actions",
+  "thread_state" : "existing_thread",
+  "call_to_actions":[
+    {
+      "type":"postback",
+      "title":"Yardım",
+      "payload":"PAYLOAD_HELP"
+    },
+    {
+      "type":"postback",
+      "title":"Yeni Sorgu",
+      "payload":"PAYLOAD_START_OVER"
+    },
+    {
+      "type":"web_url",
+      "title":"??Websitesi??",
+      "url":"https://maps.google.com",
+      "webview_height_ratio": "compact"
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAACZBdfgZACRcBAKw3LFRKs9JtrLZAvt20nzwUoZCJ9tnLag23HP8O1FCxU2CoaNVVWqyWMv6bZBDBDAKHLntFmUijeUVZA8b2gDUhDTgZCB2JCcJo1ZBV4KFGBo7dSWq1LcaI43lK8pzVj4HsqtiRepyZA6ZB91Itc0JlGBWCPd2SagZDZD"
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+* Whitelist the domain *
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type" : "domain_whitelisting",
+  "whitelisted_domains" : ["https://chatbot-kargom.herokuapp.com/"],
+  "domain_action_type": "add"
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAACZBdfgZACRcBAKw3LFRKs9JtrLZAvt20nzwUoZCJ9tnLag23HP8O1FCxU2CoaNVVWqyWMv6bZBDBDAKHLntFmUijeUVZA8b2gDUhDTgZCB2JCcJo1ZBV4KFGBo7dSWq1LcaI43lK8pzVj4HsqtiRepyZA6ZB91Itc0JlGBWCPd2SagZDZD"
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
